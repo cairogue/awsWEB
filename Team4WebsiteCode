@@ -11,29 +11,100 @@
         <h1>Analytics Dashboard</h1>
         <nav>
             <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#traffic">Traffic</a></li>
-                <li><a href="#engagement">Engagement</a></li>
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#requests">Requests</a></li>
+                <li><a href="#additional">Additional Info</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="overview">
+        <section id="overview" class="tab-content active">
             <h2>Overview</h2>
-            <!-- Analytics Overview Content -->
+            <!-- Overview content here -->
         </section>
-        <section id="traffic">
-            <h2>Traffic</h2>
-            <!-- Traffic Analytics Content -->
+        <section id="requests" class="tab-content">
+            <h2>Requests</h2>
+            <!-- Requests content here -->
         </section>
-        <section id="engagement">
-            <h2>Engagement</h2>
-            <!-- Engagement Analytics Content -->
+        <section id="additional" class="tab-content">
+            <h2>Additional Information</h2>
+            <!-- Additional information content here -->
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Analytics Dashboard</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('nav a');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const targetId = tab.getAttribute('href').substring(1);
+            tabContents.forEach(content => {
+                if (content.id === targetId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+});
