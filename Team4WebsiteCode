@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Analytics Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#traffic">Traffic</a></li>
+                <li><a href="#engagement">Engagement</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <!-- Analytics Overview Content -->
+        </section>
+        <section id="traffic">
+            <h2>Traffic</h2>
+            <!-- Traffic Analytics Content -->
+        </section>
+        <section id="engagement">
+            <h2>Engagement</h2>
+            <!-- Engagement Analytics Content -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Analytics Dashboard</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
