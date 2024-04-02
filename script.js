@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     function submitQuestion() {
         var userQuestion = document.getElementById("userQuestion").value;
-        console.log("User's question:", userQuestion);
+        console.log("Enter two teams to predict series outcome:", userQuestion);
         // You can add additional code here to process the user's question as needed.
     }
 
