@@ -19,4 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+    function submitQuestion() {
+        var userQuestion = document.getElementById("userQuestion").value;
+        console.log("User's question:", userQuestion);
+        // You can add additional code here to process the user's question as needed.
+    }
+
+    const questionInput = document.getElementById("userQuestion");
+    const submitButton = document.querySelector('.question-box button');
+
+    submitButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        submitQuestion();
+    });
 });
